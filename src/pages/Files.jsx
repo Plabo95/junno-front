@@ -7,6 +7,7 @@ import Topbar from "../components/Topbar";
 
 //image
 import upload from '../img/upload.png'
+import xcell from '../img/xcell.png'
 
 export default function Files(){
 
@@ -16,9 +17,9 @@ export default function Files(){
             <Topbar/>
             <Flex>
                 <Sidebar/>
-                <Flex w='100%' align='center' direction='column' pt='2em' gap='2em'>
+                <Flex w='100%' px='5%' direction='column' pt='2em' gap='2em' border='1px'>
                     {/* Title */}
-                    <Flex align='center' justify='space-between' w='80%'>
+                    <Flex align='center' justify='space-between'>
                         <Text fontWeight='500' fontSize='32px' color='green'>Archivos</Text>
                         <Flex align='center' gap='1em'>
                             <Link fontSize='16px' fontWeight='bold' textDecor='underline' color='green'> Subir archivo</Link>
@@ -30,6 +31,34 @@ export default function Files(){
                             tristique massa pellentesque et risus nulla in in. Porttitor sociis dolor, 
                             nulla quam cursus pulvinar mauris, laoreet tincidunt.
                     </Text>
+
+                    {/* File list */}
+                    <Flex direction='column' gap='1em' alignSelf='start' w='40%'>
+                        {/*Item */}
+                        <Flex justify='space-between'>
+                            <Flex gap='1em' align='center'>
+                                <Image src={xcell} />
+                                <Text> Exc.permisos.csv </Text>
+                            </Flex>
+                            <Text>3-05-2022</Text>
+                        </Flex>
+                        {/*Item */}
+                        <Flex justify='space-between'>
+                            <Flex gap='1em' align='center'>
+                                <Image src={xcell} />
+                                <Text> Exc.permisos.csv </Text>
+                            </Flex>
+                            <Text>12-09-2022</Text>
+                        </Flex>
+                        {/*Item */}
+                        <Flex justify='space-between'>
+                            <Flex gap='1em' align='center'>
+                                <Image src={xcell} />
+                                <Text> Exc.permisos.csv </Text>
+                            </Flex>
+                            <Text>30-12-2019</Text>
+                        </Flex>
+                    </Flex>
 
                 </Flex>
             </Flex>
