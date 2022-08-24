@@ -1,34 +1,30 @@
-import React from "react";
-import { Flex, Text, Link, Image } from "@chakra-ui/react";
+import React, {useState} from "react";
+import { Flex } from "@chakra-ui/react";
 
 //components
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
+import SearcherForm from "../components/Searcher/SearcherForm";
+import SearcherData from "../components/Searcher/SearcherData";
 
-//image
-import upload from '../img/upload.png'
+
 
 export default function Searcher(){
 
+    const [view, setView] = useState('form')
     return(
 
         <Flex direction='column'>
             <Topbar/>
-            <Flex>
+            <Flex w='100%'>
                 <Sidebar/>
-                <Flex w='100%' direction='column' align='center'>
-                    <Flex align='center' justify='space-between' pt='4em' w='80%'>
-                        <Text fontWeight='500' fontSize='32px' color='green'>Introduce los datos</Text>
-                        <Flex align='center' gap='1em'>
-                            <Link fontSize='16px' fontWeight='bold' textDecor='underline' color='green'> Subir archivo</Link>
-                            <Image src={upload}/>
-                        </Flex>              
-                    </Flex>
-
-
-                </Flex>
+                {view === 'form' &&
+                    <SearcherForm setView={setView} />
+                }
+                {view === 'data' &&
+                    <SearcherData setView={setView} />
+                }
             </Flex>
-
         </Flex>
 
     )
