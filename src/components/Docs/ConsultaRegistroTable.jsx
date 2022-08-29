@@ -2,31 +2,17 @@ import React from "react";
 import { Table } from "react-chakra-pagination";
 import { Flex, Link, Image, Text } from "@chakra-ui/react";
 
-//icons
-import trash from '../../img/ListadoFincas/trash.png'
-
 const users = [
     {
       id: 1,
-      name: "Finca 1",
-      email: "738635210928637HBJ",
-      phone: "Aceptado",
-    },
-    {
-      id: 2,
-      name: "Finca 2",
-      email: "738635210928637HBJ",
-      phone: "Rechazado",
-    },
-    {
-      id: 2,
-      name: "Finca 3",
-      email: "738635210928637HBJ",
-      phone: "ERROR",
+      name: "2002-Er191B",
+      email: "Solicitud de certificado urbanístico SIA 15789",
+      phone: "Telemática",
+      datetime:'08/06/2022 15:43'
     },
   ]
 
-export default function ResultsTable({setState}){
+export default function ConsultaRegistroTable({setState}){
     const [page, setPage] = React.useState(1);
 
     // Formatter for each user
@@ -34,26 +20,31 @@ export default function ResultsTable({setState}){
       name: user.name,
       email: user.email,
       phone: user.phone,
+      datetime:user.datetime,
       action:(
         <Flex gap='2em'>
+            <Link color='green' fontWeight='bold' onClick={()=>setState('finca')} >Descargar</Link>
             <Link color='green' fontWeight='bold' onClick={()=>setState('finca')} >Ver</Link>
-            <Image src={trash} />
         </Flex>
       )      
     }));
     
     const tableColumns = [
         {
-          Header: "Nº Finca",
+          Header: "Número",
           accessor: "name" 
         },
         {
-          Header: "Nº Registro",
+          Header: "Resumen",
           accessor: "email"
         },
         {
-          Header: "Estado",
+          Header: "Forma de presentación",
           accessor: "phone"
+        },
+        {
+          Header: "Fecha y Hora",
+          accessor: "datetime"
         },
         {
             Header: "",
@@ -64,7 +55,7 @@ export default function ResultsTable({setState}){
 
     return(
         <Flex w='60%' direction='column'>
-            <Text px='5%' pt='2em' fontWeight='500' fontSize='32px' color='green'>Listado fincas</Text>
+            <Text px='5%' pt='2em' fontWeight='500' fontSize='32px' color='green'>Consulta de registro</Text>
             <Table
             colorScheme="green"
             // Fallback component when list is empty

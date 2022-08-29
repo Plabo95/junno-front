@@ -1,32 +1,12 @@
 import React from "react";
 import { Table } from "react-chakra-pagination";
-import { Flex, Link, Image, Text } from "@chakra-ui/react";
-
-//icons
-import trash from '../../img/ListadoFincas/trash.png'
+import { Flex, Text } from "@chakra-ui/react";
 
 const users = [
-    {
-      id: 1,
-      name: "Finca 1",
-      email: "738635210928637HBJ",
-      phone: "Aceptado",
-    },
-    {
-      id: 2,
-      name: "Finca 2",
-      email: "738635210928637HBJ",
-      phone: "Rechazado",
-    },
-    {
-      id: 2,
-      name: "Finca 3",
-      email: "738635210928637HBJ",
-      phone: "ERROR",
-    },
+
   ]
 
-export default function ResultsTable({setState}){
+export default function ConsultaExpedienteTable({setState}){
     const [page, setPage] = React.useState(1);
 
     // Formatter for each user
@@ -34,37 +14,42 @@ export default function ResultsTable({setState}){
       name: user.name,
       email: user.email,
       phone: user.phone,
-      action:(
-        <Flex gap='2em'>
-            <Link color='green' fontWeight='bold' onClick={()=>setState('finca')} >Ver</Link>
-            <Image src={trash} />
-        </Flex>
-      )      
+      state:user.state,
+      opening:user.opening,
+      closing:user.closing,
     }));
     
     const tableColumns = [
         {
-          Header: "Nº Finca",
+          Header: "Nº Expediente",
           accessor: "name" 
         },
         {
-          Header: "Nº Registro",
+          Header: "Título",
           accessor: "email"
         },
         {
-          Header: "Estado",
+          Header: "Tipo de relación",
           accessor: "phone"
         },
         {
-            Header: "",
-            accessor: "action"
+            Header: "Estado",
+            accessor: "state"
+          },
+        {
+            Header: "Apertura",
+            accessor: "opening"
+          },
+          {
+            Header: "Cierre",
+            accessor: "closing"
           }
       ];
 
 
     return(
         <Flex w='60%' direction='column'>
-            <Text px='5%' pt='2em' fontWeight='500' fontSize='32px' color='green'>Listado fincas</Text>
+            <Text pt='2em' px='5%' fontWeight='500' fontSize='32px' color='green'>Consulta de expediente</Text>
             <Table
             colorScheme="green"
             // Fallback component when list is empty

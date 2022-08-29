@@ -8,6 +8,9 @@ import DocsStart from "../components/Docs/DocsStart";
 import DocsProgress from "../components/Docs/DocsProgress";
 import ResultsTable from "../components/Docs/ResultsTable";
 import DocsFinca from "../components/Docs/DocsFinca";
+import ConsultaExpedienteTable from "../components/Docs/ConsultaExpedienteTable";
+import ConsultaRegistroTable from "../components/Docs/ConsultaRegistroTable";
+import FichaTecnica from "../components/Docs/FichaTecnica";
 
 export default function Docs(){
 
@@ -29,6 +32,15 @@ export default function Docs(){
                 }
                 { state==='finca' && 
                     <DocsFinca setState={setState} />
+                }
+                { state==='consultaexpediente' && 
+                    <ConsultaExpedienteTable setState={setState} />
+                }
+                { state==='consultaregistro' && 
+                    <ConsultaRegistroTable setState={setState} />
+                }
+                { state==='fichatecnica' && 
+                    <FichaTecnica setState={setState} />
                 }
             </Flex>
         </Flex>
