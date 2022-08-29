@@ -20,9 +20,9 @@ export default function Sidebar(){
                 Visor ambiental </Link>
             <Link align='center' fontSize='20px' color='white' onClick={()=>navigate('/documentos')} textDecor={location.pathname ==='/documentos'? 'underline' : 'none' }
                 >Documentos </Link>
-            <Link align='center' fontSize='20px' color='white' onClick={()=>navigate('/documentos')} textDecor={location.pathname ==='/documentos'? 'underline' : 'none' }
+            <Link align='center' fontSize='20px' color='white' onClick={()=>navigate('/inkolan')} textDecor={location.pathname ==='/inkolan'? 'underline' : 'none' }
                 >Solicitud inkolan </Link>
-            <Link align='center' fontSize='20px' color='white' onClick={()=>navigate('/documentos')} textDecor={location.pathname ==='/documentos'? 'underline' : 'none' }
+            <Link align='center' fontSize='20px' color='white' onClick={()=>navigate('/energetica')} textDecor={location.pathname ==='/energetica'? 'underline' : 'none' }
                 >Solicitud energética </Link>
         </Flex>
 

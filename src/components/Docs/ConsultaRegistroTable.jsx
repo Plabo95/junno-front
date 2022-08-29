@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "react-chakra-pagination";
-import { Flex, Link, Image, Text } from "@chakra-ui/react";
+import { Flex, Link, Text } from "@chakra-ui/react";
 
 const users = [
     {

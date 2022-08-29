@@ -9,7 +9,7 @@ import ListTable from "../components/List/ListTable";
 //logos
 import search from "../img/ListadoFincas/search.png"
 
-export default function Searcher(){
+export default function List(){
 
     return(
 
