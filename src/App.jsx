@@ -13,6 +13,7 @@ import Visor from './pages/Visor'
 import Docs from './pages/Docs'
 import Inkolan from './pages/Inkolan';
 import Energetica from './pages/Energetica';
+import Profile from './pages/Profile';
 
 export default function App() {
   return (
@@ -30,6 +31,8 @@ export default function App() {
           <Route path='/documentos' element={<Docs/>} />
           <Route path='/inkolan' element={<Inkolan/>} />
           <Route path='/energetica' element={<Energetica/>} />
+          <Route path='/perfil' element={<Profile/>} />
+
 
           <Route path="*" element={<p>There's nothing here: 404!</p>} />
       </Routes>

@@ -24,7 +24,7 @@ export default function Topbar(){
                     <Text color='white' >Contacta</Text>
                 </Flex>
                 <Image src={bell}  />
-                <Image src={profile}  />
+                <Image onClick={()=>navigate('/perfil')} cursor='pointer' src={profile}  />
                 <Image src={logout}  />
             </Flex>
         </Flex>

@@ -79,8 +79,8 @@ export default function RegisterFormF(){
                                 <Input bg='white' placeholder='Teléfono' />
                             </Flex>
                             <Flex direction='column' gap='1' w='50%'>
-                                <Text fontWeight='bold' ml='1em' color='green'>NIF/NIE*</Text>
-                                <Input bg='white'placeholder='NIF/NIE' />
+                                <Text fontWeight='bold' ml='1em' color='green'>CIF</Text>
+                                <Input bg='white'placeholder='CIF' />
                             </Flex>
                         </Flex>
                     </TabPanel>
