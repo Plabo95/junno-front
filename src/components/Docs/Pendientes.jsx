@@ -22,7 +22,7 @@ const users = [
     },
   ]
 
-export default function DocsTable(){
+export default function Pendientes(){
     const [page, setPage] = React.useState(1);
 
     // Formatter for each user

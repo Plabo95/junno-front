@@ -4,7 +4,7 @@ import { Flex, Button, Text} from "@chakra-ui/react";
 //components
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import DocsTable from "../components/Docs/DocsTable";
+import Pendientes from "../components/Docs/Pendientes";
 
 
 export default function Energetica(){
@@ -22,7 +22,7 @@ export default function Energetica(){
                     </Text>
                     <Button ml='5%'  colorScheme='green' w='15%' > Iniciar proceso</Button>
                     <Flex ml='2em' w='60%'>
-                        <DocsTable/>
+                        <Pendientes/>
                     </Flex>  
                 </Flex>
             

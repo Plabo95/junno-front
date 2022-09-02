@@ -1,8 +1,9 @@
 import React from "react";
-import { Flex, Text, Button } from "@chakra-ui/react";
+import { Flex, Text, Button, Tabs, Tab, TabList, TabPanels, TabPanel } from "@chakra-ui/react";
 
 //components
-import DocsTable from "./DocsTable";
+import Pendientes from "./Pendientes";
+import Solicitados from "./Solicitados";
 
 export default function DocsStart({setState}){
 
@@ -16,7 +17,21 @@ export default function DocsStart({setState}){
             <Button ml='5%'  colorScheme='green' w='15%' onClick={()=>setState('progress')} > Iniciar proceso</Button>
         
             <Flex ml='2em' w='60%'>
-                <DocsTable/>
+
+            <Tabs rounded='xl' mt='1em' isFitted variant='enclosed' size='md' w='100%' colorScheme={'green'} >
+                        <TabList  borderColor='green'>
+                            <Tab>Pendientes</Tab>
+                            <Tab>Solicitados</Tab>
+                        </TabList>
+                        <TabPanels>
+                            <TabPanel>
+                                <Pendientes/>
+                            </TabPanel>
+                            <TabPanel>
+                                <Solicitados setState={setState} />
+                            </TabPanel>
+                        </TabPanels>
+                    </Tabs>   
             </Flex>  
         </Flex>
     )
