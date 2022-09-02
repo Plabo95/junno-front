@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Input, Button, Text, Tabs, Tab, TabList, TabPanels, TabPanel, Link, Image } from "@chakra-ui/react";
+import { FilePicker } from 'react-file-picker'
 
 //image
 import upload from '../../img/upload.png'
@@ -10,10 +11,14 @@ export default function SearcherForm({setView}) {
         <Flex w='100%' direction='column' align='center' gap='4em' pt='2em'>
             <Flex align='center' justify='space-between' w='80%'>
                 <Text fontWeight='500' fontSize='32px' color='green'>Introduce los datos</Text>
+                <FilePicker
+                    extensions={['md']}
+                >
                 <Flex align='center' gap='1em'>
                     <Link fontSize='16px' fontWeight='bold' textDecor='underline' color='green'> Subir archivo</Link>
                     <Image src={upload}/>
-                </Flex>              
+                </Flex>
+                </FilePicker>              
             </Flex>
             <Flex direction='column' boxShadow='lg' rounded='xl' w='80%' align='center' bg='whiteAlpha.700' > 
                     <Tabs rounded='xl' isFitted variant='enclosed' size='lg' w='100%' colorScheme={'green'} >

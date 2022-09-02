@@ -8,7 +8,7 @@ export default function DocsProgress({setState}){
 
     const sube = async() => {
         if(progress<100){
-            setTimeout(() => {setProgress(progress+1);}, 50);        
+            setTimeout(() => {setProgress(progress+1);}, 10);        
         }
     }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Text, Button, Image } from "@chakra-ui/react";
+import { FilePicker } from 'react-file-picker'
 
 import word from '../../img/documentos/word.png'
 
@@ -45,8 +46,9 @@ export default function DocsFinca({setState}){
                         <Text fontWeight='bold' >Doc.permisos.word</Text>
                     </Flex>
                 </Flex>
-                <Button variant='outline' colorScheme='green' w='15%' onClick={()=>setState('progress')} > Adjuntar archivo</Button>
-
+                <FilePicker>
+                <Button variant='outline' colorScheme='green' w='15%' > Adjuntar archivo</Button>
+                </FilePicker>
             </Flex>
 
         

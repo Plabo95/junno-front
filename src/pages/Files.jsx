@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Text, Link, Image } from "@chakra-ui/react";
+import { FilePicker } from 'react-file-picker'
 
 //components
 import Sidebar from "../components/Sidebar";
@@ -21,10 +22,14 @@ export default function Files(){
                     {/* Title */}
                     <Flex align='center' justify='space-between'>
                         <Text fontWeight='500' fontSize='32px' color='green'>Archivos</Text>
+                        <FilePicker
+                            extensions={['md']}
+                        >
                         <Flex align='center' gap='1em'>
                             <Link fontSize='16px' fontWeight='bold' textDecor='underline' color='green'> Subir archivo</Link>
                             <Image src={upload}/>
-                        </Flex>              
+                        </Flex>
+                        </FilePicker>              
                     </Flex>
 
                     <Text w='80%'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque 
