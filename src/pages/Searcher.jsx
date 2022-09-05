@@ -6,6 +6,7 @@ import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 import SearcherForm from "../components/Searcher/SearcherForm";
 import SearcherData from "../components/Searcher/SearcherData";
+import SearcherCarto from "../components/Searcher/SearcherCarto";
 
 
 
@@ -23,6 +24,9 @@ export default function Searcher(){
                 }
                 {view === 'data' &&
                     <SearcherData setView={setView} />
+                }
+                {view === 'carto' &&
+                    <SearcherCarto setView={setView} />
                 }
             </Flex>
         </Flex>

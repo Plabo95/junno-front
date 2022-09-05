@@ -1,7 +1,7 @@
 import React from "react"
 import { Flex, Text, Button } from "@chakra-ui/react"
 
-export default function SearcherData () {
+export default function SearcherData ({setView}) {
 
     return(
         <Flex w='100%' direction='column' gap='2em' pt='2em' px='4em' mb='5vh'>
@@ -51,7 +51,7 @@ export default function SearcherData () {
                     <Text>Lorem impsum</Text>
                 </Flex>
             </Flex>
-            <Button colorScheme='green' variant='outline' w='20%' mt='2em' > Cartografía</Button>
+            <Button colorScheme='green' variant='outline' w='20%' mt='2em' onClick={()=>setView('carto')}> Cartografía</Button>
         </Flex>
     )
 }

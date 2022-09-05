@@ -57,7 +57,7 @@ export default function SearcherForm({setView}) {
                                     </Flex>
                                     <Flex justify='space-evenly' pt='2em'>
                                         <Button colorScheme={'green'} variant='outline' w='25%' isDisabled={true}> Datos </Button>
-                                        <Button colorScheme={'green'} variant='outline' w='25%'> Cartografía </Button>
+                                        <Button colorScheme={'green'} variant='outline' w='25%' onClick={()=>setView('carto')} > Cartografía </Button>
                                     </Flex>
                                 </Flex>
                             </TabPanel>
