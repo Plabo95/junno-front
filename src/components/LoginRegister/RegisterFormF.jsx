@@ -1,10 +1,13 @@
 import React from "react";
-import { Flex, Input, Button, Text, Tabs, Tab, TabList, TabPanels, TabPanel } from "@chakra-ui/react";
+import { Flex, Input, Button, Text, Tabs, Tab, TabList, TabPanels, TabPanel, Link } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 //components
 
 
 export default function RegisterFormF(){
+
+    const navigate = useNavigate()
 
     return(
         <Flex direction='column' rounded='xl' p='3em' align='center' bg='whiteAlpha.700'>
@@ -93,6 +96,10 @@ export default function RegisterFormF(){
                  Registrarse 
             </Button>
             <Text>Los campos con * son obligatorios</Text>
+            <Flex gap='1'>
+                <Text>¿Ya tienes cuenta? Haz</Text>
+                <Link fontWeight='bold' color='green' onClick={()=>navigate('/login')} >Login</Link>
+            </Flex>
         </Flex>
     )
 }

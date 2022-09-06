@@ -18,7 +18,7 @@ export default function LoginForm(){
             <Text fontSize='32px' fontWeight='600' mb='1em'>BIENVENIDO</Text>
             <Input mb='1em' placeholder='Usuario' />
             <Input mb='1em' placeholder='Contraseña' type='password' />
-            <Button my='1em' colorScheme='green' w='100%'>
+            <Button cursor='pointer' onClick={()=>navigate('/')} my='1em' colorScheme='green' w='100%'>
                  Login 
             </Button>
 
