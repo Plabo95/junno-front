@@ -19,9 +19,9 @@ export default function VisorForm({setState}) {
             <Text  px='5%' fontWeight='500' fontSize='32px' color='green'>Introduce la Referencia Catastral</Text>
             <Flex direction='column' w='50%' px='5%' mt='2em' gap='1em' >
                 <Text fontSize='20px' fontWeight='400' >Referencia Catastral</Text>
-                <Input bg='gray.200' />
-                <Text fontSize='20px' fontWeight='400' >Localidad *(Introduce Aragon / Castilla)</Text>
-                <Input bg='gray.200' onChange={(e)=>setProvincia(e.target.value)} />
+                <Input bg='gray.200' placeholder='22153A004000860000UB'/>
+                <Text fontSize='20px' fontWeight='400' >Localidad </Text>
+                <Input bg='gray.200' placeholder='Aragon/Castilla' onChange={(e)=>setProvincia(e.target.value)} />
                 <Text fontSize='20px' fontWeight='400' >Municipio</Text>
                 <Input bg='gray.200' />
                 <Button colorScheme='green' w='30%' mt='2em' onClick={buscar} > Buscar </Button>

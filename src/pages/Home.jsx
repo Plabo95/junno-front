@@ -37,7 +37,7 @@ export default function Home(){
                         <Text  fontSize='18px'  color='white' fontWeight='bold' > Mis  Archivos</Text>
                         <Image src={archivos} boxSize='90px' />
                     </Flex>
-                    <Flex bg='whiteAlpha.500'  minW='250px' h='200px' rounded='lg' p='2em' direction='column' justify='center' align='center' gap='1em'
+                    <Flex bg='whiteAlpha.500'  minW='250px' h='200px' rounded='lg' p='2em' direction='column' cursor='pointer' justify='center' align='center' gap='1em'
                     onClick={()=>navigate('/listado')}>
                         <Text fontSize='18px'  color='white' fontWeight='bold' > Listado Fincas</Text>
                         <Image src={lista} boxSize='90px' />

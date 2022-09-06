@@ -17,8 +17,8 @@ export default function List(){
             <Topbar/>
             <Flex>
                 <Sidebar/>
-                <Flex w='100%'  pt='2em' direction='column'>
-                    <Flex px='5%' w='100%' justify='space-between' >
+                <Flex w='100%' px='5%' pt='2em' direction='column'>
+                    <Flex w='100%' justify='space-between' >
                     <Text  fontWeight='500' fontSize='32px' color='green'>Listado fincas</Text>
                     <InputGroup w='30%' >
                         <InputLeftElement

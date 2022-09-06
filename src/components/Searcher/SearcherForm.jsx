@@ -11,17 +11,17 @@ export default function SearcherForm({setView}) {
 
 
     const carto = () =>{
-        if(ref.toUpperCase()==='VERDE'){
+        if(ref.toUpperCase()==='22153A004001320000UK'){
             setView('cartogreen')
         }
-        if(ref.toUpperCase()==='ROJO'){
+        if(ref.toUpperCase()==='22153A004000860000UB'){
             setView('cartored')
         }
     }
 
     return(
         <Flex w='100%' direction='column' align='center' gap='4em' pt='2em'>
-            <Flex align='center' justify='space-between' w='80%'>
+            <Flex align='center' justify='space-between' w='100%' px='5%'>
                 <Text fontWeight='500' fontSize='32px' color='green'>Introduce los datos</Text>
                 <FilePicker
                     extensions={['md']}
@@ -32,7 +32,7 @@ export default function SearcherForm({setView}) {
                 </Flex>
                 </FilePicker>              
             </Flex>
-            <Flex direction='column' boxShadow='lg' rounded='xl' w='80%' align='center' bg='whiteAlpha.700' > 
+            <Flex direction='column' boxShadow='lg' rounded='xl' w='100%' px='5%' align='center' bg='whiteAlpha.700' > 
                     <Tabs rounded='xl' isFitted variant='enclosed' size='lg' w='100%' colorScheme={'green'} >
                         <TabList mb='1em' borderColor='green'>
                             <Tab>Referencia Catastral</Tab>
@@ -43,7 +43,7 @@ export default function SearcherForm({setView}) {
                                 <Flex direction='column' justify='space-evenly' minH='20vh' >
                                     <Flex mb='1em' gap='4em' >
                                         <Text w='50%' fontWeight='bold' color='green'>*Referencia Ctastral</Text>
-                                        <Input  bg='gray.200' placeholder='Escribe rojo o verde' onChange={(e)=>setRef(e.target.value)} />
+                                        <Input  bg='gray.200' placeholder='22153A004001320000UK' onChange={(e)=>setRef(e.target.value)} />
                                     </Flex>
                                     <Flex pt='2em' justify='space-evenly'>
                                         <Button colorScheme={'green'} variant='outline' w='25%' onClick={()=>setView('data')}> Datos </Button>
