@@ -6,8 +6,8 @@ import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 import SearcherForm from "../components/Searcher/SearcherForm";
 import SearcherData from "../components/Searcher/SearcherData";
-import SearcherCarto from "../components/Searcher/SearcherCarto";
-
+import SearcherCartoRed from "../components/Searcher/SearcherCartoRed";
+import SearcherCartoGreen from "../components/Searcher/SearcherCartoGreen";
 
 
 export default function Searcher(){
@@ -25,8 +25,11 @@ export default function Searcher(){
                 {view === 'data' &&
                     <SearcherData setView={setView} />
                 }
-                {view === 'carto' &&
-                    <SearcherCarto setView={setView} />
+                {view === 'cartogreen' &&
+                    <SearcherCartoGreen setView={setView} />
+                }
+                {view === 'cartored' &&
+                    <SearcherCartoRed setView={setView} />
                 }
             </Flex>
         </Flex>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Flex, Input, Button, Text, Tabs, Tab, TabList, TabPanels, TabPanel, Link, Image } from "@chakra-ui/react";
 import { FilePicker } from 'react-file-picker'
 
@@ -6,6 +6,18 @@ import { FilePicker } from 'react-file-picker'
 import upload from '../../img/upload.png'
 
 export default function SearcherForm({setView}) {
+
+    const [ref, setRef] = useState('')
+
+
+    const carto = () =>{
+        if(ref.toUpperCase()==='VERDE'){
+            setView('cartogreen')
+        }
+        if(ref.toUpperCase()==='ROJO'){
+            setView('cartored')
+        }
+    }
 
     return(
         <Flex w='100%' direction='column' align='center' gap='4em' pt='2em'>
@@ -31,11 +43,11 @@ export default function SearcherForm({setView}) {
                                 <Flex direction='column' justify='space-evenly' minH='20vh' >
                                     <Flex mb='1em' gap='4em' >
                                         <Text w='50%' fontWeight='bold' color='green'>*Referencia Ctastral</Text>
-                                        <Input  bg='gray.200' placeholder='Referencia Catastral' />
+                                        <Input  bg='gray.200' placeholder='Escribe rojo o verde' onChange={(e)=>setRef(e.target.value)} />
                                     </Flex>
                                     <Flex pt='2em' justify='space-evenly'>
                                         <Button colorScheme={'green'} variant='outline' w='25%' onClick={()=>setView('data')}> Datos </Button>
-                                        <Button colorScheme={'green'} variant='outline' w='25%'> Cartografía </Button>
+                                        <Button colorScheme={'green'} variant='outline' w='25%' onClick={carto}> Cartografía </Button>
                                     </Flex>
                                 </Flex>
                             </TabPanel>
@@ -57,7 +69,7 @@ export default function SearcherForm({setView}) {
                                     </Flex>
                                     <Flex justify='space-evenly' pt='2em'>
                                         <Button colorScheme={'green'} variant='outline' w='25%' isDisabled={true}> Datos </Button>
-                                        <Button colorScheme={'green'} variant='outline' w='25%' onClick={()=>setView('carto')} > Cartografía </Button>
+                                        <Button colorScheme={'green'} variant='outline' w='25%' onClick={carto} > Cartografía </Button>
                                     </Flex>
                                 </Flex>
                             </TabPanel>

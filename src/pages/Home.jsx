@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Heading, Text, Image} from "@chakra-ui/react";
+import { Flex, Text, Image} from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 //components
@@ -11,6 +11,7 @@ import docs from "../img/home/docs.png"
 import lista from "../img/home/lista.png"
 import visor from "../img//home/visor.png"
 import archivos from "../img/home/archivos.png"
+import logo from "../img/logo.png"
 
 export default function Home(){
 
@@ -21,8 +22,10 @@ export default function Home(){
             <Flex minH='100vh' w='100%'  direction='column' p='4em' gap='2em'
             bgGradient='radial-gradient(97.7% 193.29% at 100% 50%, rgba(0, 94, 42, 0.75) 0%, rgba(0, 94, 42, 0.75) 23.03%, rgba(28, 93, 159, 0.75) 56.03%, rgba(4, 52, 135, 0.75) 96.35%)'>      
 
-                <Heading>JUNNO</Heading>
-
+                <Flex gap='2em' align='center' maxW='15%' direction='column' mb='2em'>
+                    <Image src={logo} />
+                    <Text fontWeight='bold' color='#A8F200' >La energía mas rápida</Text>
+                </Flex>
                 <Flex justify='space-evenly'>
                     <Flex bg='whiteAlpha.500'  minW='250px' cursor='pointer' h='200px' rounded='lg' p='2em' direction='column' justify='center' align='center' gap='1em'
                     onClick={()=>navigate('/buscador')}>

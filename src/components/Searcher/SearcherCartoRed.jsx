@@ -4,7 +4,7 @@ import { Flex, Image} from "@chakra-ui/react";
 //image
 import carto from '../../img/buscador/carto.png'
 
-export default function SearcherCarto({setView}) {
+export default function SearcherCartoRed({setView}) {
 
     return(
         <Flex w='100%' >

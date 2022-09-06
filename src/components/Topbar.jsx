@@ -7,6 +7,7 @@ import bell from "../img/topbar/bell.png"
 import logout from "../img/topbar/logout.png"
 import profile from "../img/topbar/profile.png"
 import telf from "../img/topbar/telf.png"
+import logo from "../img/logo.png"
 
 export default function Topbar(){
 
@@ -15,9 +16,7 @@ export default function Topbar(){
     return(
 
         <Flex w='100%' h='10vh' bg='#005E2A' align='center' justify='space-between' px='5em'>
-            <Text size='32px' fontSize={'bold'} onClick={()=>navigate('/')} >
-            JUNNO
-            </Text> 
+            <Image maxW='6%' src={logo} onClick={()=>navigate('/')} cursor='pointer' />
             <Flex gap='3em' align='center'>
                 <Link color='white' onClick={()=>navigate('/login')}>Login</Link>
                 <Link color='white' onClick={()=>navigate('/register')}>Register</Link>
