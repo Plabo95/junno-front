@@ -19,6 +19,8 @@ export default function Topbar(){
             JUNNO
             </Text> 
             <Flex gap='3em' align='center'>
+                <Link onClick={()=>navigate('/login')}>Login</Link>
+                <Link onClick={()=>navigate('/register')}>Register</Link>
                 <Flex align='center' gap='1em'>
                     <Image src={telf}  />
                     <Text color='white' >Contacta</Text>
