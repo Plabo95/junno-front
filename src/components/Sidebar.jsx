@@ -55,7 +55,8 @@ export default function Sidebar(){
                     >-Visores ambientales</Link>
                     <Link fontSize='16px' fontWeight='400' color='white' onClick={()=>navigate('/documentos')} textDecor={location.pathname ==='/documentos'? 'underline' : 'none' }
                     >-Compatibilidad urbanística</Link>
-                    <Link fontSize='16px' fontWeight='400'  color='white'>-Conexión red eléctrica</Link>
+                    <Link fontSize='16px' fontWeight='400'  color='white' onClick={()=>navigate('/inkolan')} textDecor={location.pathname ==='/inkolan'? 'underline' : 'none' }
+                    >-Conexión red eléctrica</Link>
                     <Link fontSize='16px' fontWeight='400' color='white'  onClick={()=>navigate('/listado')} textDecor={location.pathname ==='/listado'? 'underline' : 'none' }
                     >-Listado de fincas</Link>
                 </Flex>
@@ -63,7 +64,8 @@ export default function Sidebar(){
                 Acceso y conexión PSFV </Link>
                 <Flex direction='column' ml='10%'  gap='0.5em' display={acceso}>
                     <Link fontSize='16px' fontWeight='400'  color='white'>-Constitución y deposito</Link>
-                    <Link fontSize='16px' fontWeight='400'  color='white'>-Conexión con compañías energéticas</Link>
+                    <Link fontSize='16px' fontWeight='400'  color='white' onClick={()=>navigate('/energetica')} textDecor={location.pathname ==='/energetica'? 'underline' : 'none' }
+                    >-Conexión compañías energéticas</Link>
                     <Link fontSize='16px' fontWeight='400'  color='white'>-Proyecto de ingeniería</Link>
                     <Link fontSize='16px' fontWeight='400' color='white'>-Listado de trámites</Link>
                 </Flex>
@@ -73,10 +75,6 @@ export default function Sidebar(){
                     <Link fontSize='16px' fontWeight='400'  color='white'>-Solicitud de permiso de obras</Link>
                     <Link fontSize='16px' fontWeight='400'  color='white'>-Listado de autorizaciones</Link>
                 </Flex>
-            <Link  fontSize='20px' color='white' onClick={()=>navigate('/inkolan')} textDecor={location.pathname ==='/inkolan'? 'underline' : 'none' }
-                >Solicitud inkolan </Link>
-            <Link  fontSize='20px' color='white' onClick={()=>navigate('/energetica')} textDecor={location.pathname ==='/energetica'? 'underline' : 'none' }
-                >Solicitud energética </Link>
         </Flex>
 
     )

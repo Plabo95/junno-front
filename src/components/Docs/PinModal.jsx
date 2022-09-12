@@ -1,6 +1,5 @@
 import {Modal, ModalOverlay, ModalContent, Input, Text, Button, Flex } from "@chakra-ui/react"
 
-import success from '../../img/documentos/success.png'
 
 export default function PinModal({isOpen, onClose, setState}){
 
