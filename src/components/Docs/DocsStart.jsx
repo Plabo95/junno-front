@@ -14,7 +14,11 @@ export default function DocsStart({setState}){
                 Inicie el registro y expediente de fincas, durante el proceso necesitaremos 
                 que aporte algunos datos para poder seguir con este tramite.
             </Text>
-            <Button ml='5%'  colorScheme='green' w='15%' onClick={()=>setState('progress')} > Iniciar proceso</Button>
+            <Flex>
+                <Button ml='5%'  colorScheme='green' w='15%' onClick={()=>setState('progress')} > Proceso automático</Button>
+                <Button ml='5%' variant='outline' colorScheme='green' w='15%' onClick={()=>setState('manual1')} > Proceso manual</Button>
+            </Flex>
+            
         
             <Flex ml='2em' w='60%'>
 

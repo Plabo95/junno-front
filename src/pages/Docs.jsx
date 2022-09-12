@@ -11,6 +11,10 @@ import DocsFinca from "../components/Docs/DocsFinca";
 import ConsultaExpedienteTable from "../components/Docs/ConsultaExpedienteTable";
 import ConsultaRegistroTable from "../components/Docs/ConsultaRegistroTable";
 import FichaTecnica from "../components/Docs/FichaTecnica";
+import DocsManual1 from "../components/Docs/DocsManual1";
+import DocsManual2 from "../components/Docs/DocsManual2";
+import DocsPIN from "../components/Docs/DocsPIN";
+import DocsPermanente from "../components/Docs/DocsPermanente";
 
 export default function Docs(){
 
@@ -27,6 +31,18 @@ export default function Docs(){
                 { state==='progress' && 
                     <DocsProgress setState={setState} />
                 }
+                { state==='manual1' && 
+                    <DocsManual1 setState={setState} />
+                }
+                { state==='manual2' && 
+                    <DocsManual2 setState={setState} />
+                }
+                { state==='PIN' && 
+                    <DocsPIN setState={setState} />
+                }
+                { state==='permanente' && 
+                    <DocsPermanente setState={setState} />
+                }                   
                 { state==='results' && 
                     <ResultsTable setState={setState} />
                 }
