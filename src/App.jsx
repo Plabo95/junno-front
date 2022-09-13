@@ -11,7 +11,7 @@ import Files from './pages/Files';
 import List from './pages/List'
 import Visor from './pages/Visor'
 import Docs from './pages/Docs'
-import Inkolan from './pages/Inkolan';
+import ConexionRed from './pages/ConexionRed';
 import Energetica from './pages/Energetica';
 import Profile from './pages/Profile';
 
@@ -29,7 +29,7 @@ export default function App() {
           <Route path='/listado' element={<List/>} />
           <Route path='/visor' element={<Visor/>} />
           <Route path='/documentos' element={<Docs/>} />
-          <Route path='/inkolan' element={<Inkolan/>} />
+          <Route path='/conexionred' element={<ConexionRed/>} />
           <Route path='/energetica' element={<Energetica/>} />
           <Route path='/perfil' element={<Profile/>} />
 

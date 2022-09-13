@@ -55,7 +55,7 @@ export default function Sidebar(){
                     >-Visores ambientales</Link>
                     <Link fontSize='16px' fontWeight='400' color='white' onClick={()=>navigate('/documentos')} textDecor={location.pathname ==='/documentos'? 'underline' : 'none' }
                     >-Compatibilidad urbanística</Link>
-                    <Link fontSize='16px' fontWeight='400'  color='white' onClick={()=>navigate('/inkolan')} textDecor={location.pathname ==='/inkolan'? 'underline' : 'none' }
+                    <Link fontSize='16px' fontWeight='400'  color='white' onClick={()=>navigate('/conexionred')} textDecor={location.pathname ==='/conexionred'? 'underline' : 'none' }
                     >-Conexión red eléctrica</Link>
                     <Link fontSize='16px' fontWeight='400' color='white'  onClick={()=>navigate('/listado')} textDecor={location.pathname ==='/listado'? 'underline' : 'none' }
                     >-Listado de fincas</Link>
