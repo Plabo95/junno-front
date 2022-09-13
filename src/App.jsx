@@ -12,8 +12,9 @@ import List from './pages/List'
 import Visor from './pages/Visor'
 import Docs from './pages/Docs'
 import ConexionRed from './pages/ConexionRed';
-import Energetica from './pages/Energetica';
+import ConexionComp from './pages/ConexionComp';
 import Profile from './pages/Profile';
+import Permiso from './pages/Permiso';
 
 export default function App() {
   return (
@@ -30,8 +31,9 @@ export default function App() {
           <Route path='/visor' element={<Visor/>} />
           <Route path='/documentos' element={<Docs/>} />
           <Route path='/conexionred' element={<ConexionRed/>} />
-          <Route path='/energetica' element={<Energetica/>} />
+          <Route path='/conexioncomp' element={<ConexionComp/>} />
           <Route path='/perfil' element={<Profile/>} />
+          <Route path='/permiso' element={<Permiso/>} />
 
 
           <Route path="*" element={<p>There's nothing here: 404!</p>} />

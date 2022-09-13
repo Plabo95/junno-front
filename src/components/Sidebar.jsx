@@ -65,13 +65,14 @@ export default function Sidebar(){
                 <Flex direction='column' ml='10%'  gap='0.5em' display={acceso}>
                     <Link fontSize='16px' fontWeight='400'  color='white'>-Constitución y deposito</Link>
                     <Link fontSize='16px' fontWeight='400'  color='white'>-Proyecto de ingeniería</Link>
-                    <Link fontSize='16px' fontWeight='400'  color='white' onClick={()=>navigate('/energetica')} textDecor={location.pathname ==='/energetica'? 'underline' : 'none' }
+                    <Link fontSize='16px' fontWeight='400'  color='white' onClick={()=>navigate('/conexioncomp')} textDecor={location.pathname ==='/conexioncomp'? 'underline' : 'none' }
                     >-Conexión compañías energéticas</Link>
                 </Flex>
             <Link  fontSize='20px' color='white' onClick={displayAutorizacion}> 
                 Autorizaciones administrativas PSFV</Link>
                 <Flex direction='column'  ml='10%'  gap='0.5em' display={autorizacion}>
-                    <Link fontSize='16px' fontWeight='400'  color='white'>-Solicitud de permiso de obras</Link>
+                    <Link fontSize='16px' fontWeight='400'  color='white' onClick={()=>navigate('/permiso')} textDecor={location.pathname ==='/permiso'? 'underline' : 'none' }
+                    >-Solicitud de permiso de obras</Link>
                 </Flex>
         </Flex>
 
