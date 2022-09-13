@@ -4,17 +4,17 @@ import { Flex} from "@chakra-ui/react";
 //components
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
-import DocsStart from "../components/Docs/DocsStart";
-import DocsProgress from "../components/Docs/DocsProgress";
+import Start from "../components/Permiso/Start";
+import Progress from "../components/Permiso/Progress";
 import ResultsTable from "../components/Docs/ResultsTable";
 import DocsFinca from "../components/Docs/DocsFinca";
 import ConsultaExpedienteTable from "../components/Docs/ConsultaExpedienteTable";
 import ConsultaRegistroTable from "../components/Docs/ConsultaRegistroTable";
 import FichaTecnica from "../components/Docs/FichaTecnica";
-import DocsManual1 from "../components/Docs/DocsManual1";
-import DocsManual2 from "../components/Docs/DocsManual2";
+import Manual1 from "../components/Permiso/Manual1";
+import Manual2 from "../components/Permiso/Manual2";
 import DocsPIN from "../components/Docs/DocsPIN";
-import DocsPermanente from "../components/Docs/DocsPermanente";
+import Permanente from "../components/Permiso/Permanente";
 
 export default function Permiso(){
 
@@ -26,22 +26,22 @@ export default function Permiso(){
             <Flex>
                 <Sidebar/>
                 { state==='start' && 
-                    <DocsStart setState={setState} />
+                    <Start setState={setState} />
                 }
                 { state==='progress' && 
-                    <DocsProgress setState={setState} />
+                    <Progress setState={setState} />
                 }
                 { state==='manual1' && 
-                    <DocsManual1 setState={setState} />
+                    <Manual1 setState={setState} />
                 }
                 { state==='manual2' && 
-                    <DocsManual2 setState={setState} />
+                    <Manual2 setState={setState} />
                 }
                 { state==='PIN' && 
                     <DocsPIN setState={setState} />
                 }
                 { state==='permanente' && 
-                    <DocsPermanente setState={setState} />
+                    <Permanente setState={setState} />
                 }                   
                 { state==='results' && 
                     <ResultsTable setState={setState} />
